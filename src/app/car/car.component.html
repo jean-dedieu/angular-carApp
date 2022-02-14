@@ -1,10 +1,16 @@
 <h1>Car works!</h1>
+<h1>{{ carBrand }}</h1>
+<label>CarNameUpdate</label>
+<input
+  type="text"
+  class="form-control"
+   (input)="onUpdateCarName($event)">
+<p>{{ carName }}</p>
 
-<p>Brand: {{carBrand}} </p>
-<p> Price: {{carPrice}} € </p>
 <button class="btn btn-success"
         [disabled]="!allowAddNewCar"
-        (click)="displayCreatedCar()">Add a Car
+        (click)="onDisplayCreatedCar()">Add a Car
 </button>
 
 <p> {{carCreationStatus}} </p>
+
