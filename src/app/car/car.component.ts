@@ -22,7 +22,7 @@ export class CarComponent implements OnInit {
   }
 
   onDisplayCreatedCar() {
-    this.carCreationStatus = "You created a car";
+    this.carCreationStatus = "You created the car " + this.carName;
   }
 
   onUpdateCarName(event: Event) {

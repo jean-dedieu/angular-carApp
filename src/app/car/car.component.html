@@ -1,10 +1,17 @@
 <h1>Car works!</h1>
 <h1>{{ carBrand }}</h1>
 <label>CarNameUpdate</label>
-<input
+<!--input
   type="text"
   class="form-control"
    (input)="onUpdateCarName($event)">
+   {{ carName }}</p>
+<p-->
+<!--ngModel for two way binding -->
+<input
+  type="text"
+  class="form-control"
+ [(ngModel)]="carName">
 <p>{{ carName }}</p>
 
 <button class="btn btn-succSess"

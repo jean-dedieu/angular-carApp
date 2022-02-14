@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {MenuComponent} from "./menu/menu.component";
 import {FooterComponent} from "./footer/footer.component";
 import { CarComponent } from './car/car.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CarComponent } from './car/car.component';
     CarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
