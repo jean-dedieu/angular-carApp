@@ -1,5 +1,10 @@
 <h1>Car works!</h1>
-<h1>{{ carBrand }}</h1>
+<h2>Car status change</h2>
+<!--online is our class in .ts tyles declared-->
+<p [ngStyle]="{backgroundColor: getColor()}"
+   [ngClass]="{online:carStatus == 'on'}">
+  {{ 'Car' }}  with the Id {{ carId }} is {{ getCarStatus() }}</p>
+
 <label>CarNameUpdate</label>
 <!--input
   type="text"
@@ -11,13 +16,16 @@
 <input
   type="text"
   class="form-control"
- [(ngModel)]="carName">
-<p>{{ carName }}</p>
+  [(ngModel)]="carName">
+<!--p>{{ carName }}</p-->
 
-<button class="btn btn-succSess"
+<button class="btn btn-success"
         [disabled]="!allowAddNewCar"
         (click)="onDisplayCreatedCar()">Add a Car
 </button>
+<p *ngIf="carCreated">You created a car and his name is : {{carName}}</p>
+<p *ngFor="let car of cars"></p>
+<!--p> {{carCreationStatus}} </p-->
+<app-user></app-user>
 
-<p> {{carCreationStatus}} </p>
 

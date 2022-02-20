@@ -6,13 +6,17 @@ import {MenuComponent} from "./menu/menu.component";
 import {FooterComponent} from "./footer/footer.component";
 import { CarComponent } from './car/car.component';
 import {FormsModule} from "@angular/forms";
+import { UserComponent } from './user/user.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     FooterComponent,
-    CarComponent
+    CarComponent,
+    UserComponent,
+
   ],
   imports: [
     BrowserModule,
